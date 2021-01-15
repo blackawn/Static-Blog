@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html lang="en" id="html" theme="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Black awn</title>
+    
+    
+        <link rel="shortcut icon" href="/images/favicon_16x16.png">
+    
+        <link rel="shortcut icon" href="/images/favicon_32x32.png">
+    
+        <link rel="shortcut icon" href="/images/favicon_48x48.png">
+    
+        <link rel="shortcut icon" href="/images/favicon_64x64.png">
+    
+        <link rel="shortcut icon" href="/images/favicon_128x128.png">
+    
+    
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Poppins&display=swap" rel="stylesheet">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background-color: var(--_pageBGColor_);
+    }
+
+    .x {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .error-text {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 7em;
+        font-weight: bold;
+        color: var(--_textColor_);
+    }
+
+    .tips-text {
+        margin: 20px;
+        font-size: 1.6em;
+        color: var(--_textColor_);
+    }
+
+    .links-x {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 14px;
+        font-size: 1.4em;
+        color: var(--_textColor_);
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    a:hover {
+        background-color: rgba(0, 0, 0, .5);
+    }
+</style>
+<body>
+<div class="x">
+    <p class="error-text">404 :(</p>
+    <p class="tips-text">PAGE NOT FOUND</p>
+    <div class="links-x">
+        <a href="/">BACK TO HOME</a><a
+                href="javascript:history.back(-1);">BACK TO PREV</a>
+    </div>
+</div>
+
+<script>
+  const htmlElem = document.getElementById('html');
+
+  let storageEvent = () => {
+    //synchronize theme
+    htmlElem.setAttribute('theme', window.localStorage.getItem('theme'));
+  }
+
+  (function () {
+    //is default open page
+    if (window.localStorage.getItem('theme') == null) {
+      window.localStorage.setItem('theme', (function () {
+        return ([22, 23, 0, 1, 2, 3, 4, 5, 6, 7].indexOf(new Date().getHours()) !== -1) ?
+            'dark' :
+            'light';
+      }()));
+    }
+
+    storageEvent();
+  }());
+
+
+  window.addEventListener('storage', storageEvent);
+</script>
+</body>
+</html>
